@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-mdns-sd = "0.13.1"
+mdns-sd = { git = "https://github.com/keepsimple1/mdns-sd", branch = "debug-disable-intf" }
 tokio = { version = "1.0", features = ["rt-multi-thread", "macros"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
