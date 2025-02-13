@@ -47,8 +47,7 @@ async fn main() {
 
     mdns.disable_interface(IfKind::IPv6).unwrap();
 
-    mdns.disable_interface(IpAddr::V4(Ipv4Addr::new(172, 17, 0, 1)))
-        .unwrap();
+    mdns.disable_interface("docker0").unwrap();
 
     // Detects devices.
     let receiver = mdns.browse(SERVICE_TYPE).unwrap();
